@@ -1,4 +1,4 @@
-name        := "spray-oauth2-slick-plugin"
+name        := "spray-oauth-slick-plugin"
 
 version     := "0.1"
 

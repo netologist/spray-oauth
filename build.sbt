@@ -1,7 +1,7 @@
 import AssemblyKeys._
 
 lazy val commonSettings = Seq(
-  organization := "io.spray",
+  organization := "com.hasanozgan",
   version := "1.0-SNAPSHOT",
   scalaVersion  := "2.10.3",
   scalacOptions := Seq(

@@ -1,4 +1,4 @@
-name        := "spray-oauth2-salat-plugin"
+name        := "spray-oauth-salat-plugin"
 
 version     := "0.1"
 
