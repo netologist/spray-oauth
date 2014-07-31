@@ -1,5 +1,6 @@
 package org.netology.spray.rest.oauth2
 
+import com.hasanozgan.demo.inmemory.oauth2.routes.ApiRoutes
 import org.netology.spray.rest.oauth2.routes._
 import org.netology.spray.rest.oauth2.utils.CustomRejectionHandler
 import akka.actor.Actor
@@ -16,7 +17,7 @@ import spray.http.Timedout
 /**
  * Created by hasanozgan on 01/03/14.
  */
-class OAuth2Actor extends Actor with SprayOAuth2Support with OAuth2Services with IndexRoutes with CustomRejectionHandler {
+class OAuth2Actor extends Actor with SprayOAuth2Support with OAuth2Services with IndexRoutes with ApiRoutes with CustomRejectionHandler {
 
   // the HttpService trait defines only one abstract member, which
   // connects the services environment to the enclosing actor or test
@@ -25,7 +26,7 @@ class OAuth2Actor extends Actor with SprayOAuth2Support with OAuth2Services with
   // this actor only runs our route, but you could add
   // other things here, like request stream processing
   // or timeout handling
-  def receive = handleTimeouts orElse runRoute(handleRejections(myRejectionHandler)(handleExceptions(myExceptionHandler)(defaultOAuth2Routes ~ initRoutes)))
+  def receive = handleTimeouts orElse runRoute(handleRejections(myRejectionHandler)(handleExceptions(myExceptionHandler)(defaultOAuth2Routes ~ apiRoutes ~ initRoutes)))
 
   def handleTimeouts: Receive = {
     case Timedout(x: HttpRequest) =>
