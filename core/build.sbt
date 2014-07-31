@@ -1,6 +1,6 @@
 name        := "spray-oauth"
 
-version     := "0.1"
+version     := "1.0-SNAPSHOT"
 
 
 resolvers ++= Seq(

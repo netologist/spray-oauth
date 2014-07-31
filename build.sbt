@@ -61,6 +61,7 @@ lazy val core = project.in(file("core"))
 lazy val salatAdapter = project.in(file("adapters/salat-adapter"))
   .dependsOn(core)
   .settings(settings: _*)
+  .settings(publishSettings: _*)
   .settings(test in assembly := {})
   .settings(testOptions in Test += Tests.Argument("showtimes", "true"))
 

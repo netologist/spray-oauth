@@ -1,6 +1,6 @@
 name        := "spray-oauth-slick-plugin"
 
-version     := "0.1"
+version     := "1.0-SNAPSHOT"
 
 
 resolvers ++= Seq(

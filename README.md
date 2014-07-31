@@ -12,6 +12,18 @@ Spray OAuth v2 Server Library
  - Salat Demo with Twirl Support
  - Slick Adapter
 
+##### SBT
+
+```scala
+
+resolvers += "Spray OAuth repo" at "https://oss.sonatype.org/content/repositories/snapshots"
+
+libraryDependencies ++= Seq(
+  "com.hasanozgan"       %%  "spray-oauth"                  % "1.0-SNAPSHOT",
+  "com.hasanozgan"       %%  "spray-oauth-salat-plugin"     % "1.0-SNAPSHOT"
+)
+                          
+```
 
 ##### Actor Support
  - SprayOAuth2Support for adapter support (salat, slick and in-memory)
