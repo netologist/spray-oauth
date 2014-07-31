@@ -50,7 +50,7 @@ lazy val publishSettings = Seq(
         </developer>
       </developers>))
 
-lazy val root = project.in( file(".") ).aggregate(core, salatAdapter, slickAdapter)
+lazy val root = project.in( file(".") ).aggregate(core, salatAdapter, slickAdapter, demo)
 
 lazy val core = project.in(file("core"))
   .settings(settings: _*)
@@ -70,3 +70,8 @@ lazy val slickAdapter = project.in(file("adapters/slick-adapter"))
   .settings(test in assembly := {})
   .settings(testOptions in Test += Tests.Argument("showtimes", "true"))
 
+lazy val demo = project.in(file("samples/inmemory-webapp"))
+  .dependsOn(core)
+  .settings(settings: _*)
+  .settings(test in assembly := {})
+  .settings(testOptions in Test += Tests.Argument("-oDS"))
