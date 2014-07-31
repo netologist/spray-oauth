@@ -1,5 +1,12 @@
+
 *.class
 *.log
+
+# MacOSX
+.DS_Store
+
+# intellij idea
+.idea*
 
 # sbt specific
 .cache/

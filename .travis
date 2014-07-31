@@ -1,0 +1,13 @@
+language: scala
+scala:
+  - 2.10.4
+script:
+  - sbt "+ test"
+jdk:
+  - oraclejdk7
+  - openjdk7
+services:
+  - mongodb
+notifications:
+  email:
+    - hasan@ozgan.net
