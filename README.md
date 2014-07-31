@@ -7,6 +7,7 @@ Spray OAuth v2 Server Library
 
 ##### Road Map 
  - Write tests
+ - Spray OAuth Rejectives
  - Write documentation
  - Salat Demo with Twirl Support
  - Slick Adapter
