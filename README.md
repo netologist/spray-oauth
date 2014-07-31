@@ -13,8 +13,8 @@ Spray OAuth v2 Server Library
 
 
 ##### Actor Support
-SprayOAuth2Support for adapter support (salat, slick and in-memory)
-OAuth2Services for defaultOAuth2Routes
+ - SprayOAuth2Support for adapter support (salat, slick and in-memory)
+ - OAuth2Services for defaultOAuth2Routes
 
 ```scala
 class OAuth2Actor extends Actor with SprayOAuth2Support with OAuth2Services with IndexRoutes with CustomRejectionHandler {
@@ -72,9 +72,7 @@ import MyJsonProtocol._
 trait TokenService extends HttpService with SprayJsonSupport with OAuth2Directives {
 
   val defaultTokenRoutes =
-
     path("token") {
-
       fetchTokenRequest { request: TokenRequest =>
         grantHandler(request) {
           case error: Error => complete(error)
@@ -82,14 +80,7 @@ trait TokenService extends HttpService with SprayJsonSupport with OAuth2Directiv
           case code: Code => complete(code)
         }
       }
-    } ~
-      path("revoke") {
-        get {
-          complete {
-            "TODO"
-          }
-        }
-      }
+    }
 }
 ```
 
