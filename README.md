@@ -1,7 +1,7 @@
-Spray OAuth
+Spray OAuth2 Provider Library
 ===========
 
-Spray OAuth v2 Server Library
+Spray OAuth2 Provider Library
 
 [![Build Status](https://api.travis-ci.org/hasanozgan/spray-oauth.svg?branch=master)](https://travis-ci.org/hasanozgan/spray-oauth)
 
