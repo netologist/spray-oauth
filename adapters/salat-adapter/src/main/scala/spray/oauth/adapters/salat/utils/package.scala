@@ -12,7 +12,7 @@ import spray.oauth.AuthUser
  * Time: 9:02 AM
  * To change this template use File | Settings | File Templates.
  */
-package object mongodb {
+package object utils {
 
   com.mongodb.casbah.commons.conversions.scala.RegisterConversionHelpers()
   com.mongodb.casbah.commons.conversions.scala.RegisterJodaTimeConversionHelpers()

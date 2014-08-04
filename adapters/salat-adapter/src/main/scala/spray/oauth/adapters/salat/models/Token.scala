@@ -4,7 +4,7 @@ import com.novus.salat.annotations._
 import com.mongodb.casbah.Imports._
 import com.github.nscala_time.time.Imports._
 import com.novus.salat.EnumStrategy
-import spray.oauth.adapters.salat.mongodb._
+import spray.oauth.adapters.salat.utils._
 import org.joda.time.{ PeriodType, ReadablePeriod, ReadableDuration }
 import spray.oauth.models.GrantType
 import spray.oauth.utils.{ OAuth2Utils, TokenGenerator }

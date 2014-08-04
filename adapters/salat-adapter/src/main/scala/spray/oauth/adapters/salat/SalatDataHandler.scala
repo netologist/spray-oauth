@@ -14,7 +14,7 @@ import com.mongodb.casbah.Imports
  * Time: 8:50 AM
  * To change this template use File | Settings | File Templates.
  */
-object MongodbDataHandler extends OAuth2DataHandler {
+object SalatDataHandler extends OAuth2DataHandler {
 
   override def findAuthInfoByRefreshToken(refreshToken: String): Option[AuthInfo] = {
     TokenDAO.findAuthInfoByRefreshToken(refreshToken)

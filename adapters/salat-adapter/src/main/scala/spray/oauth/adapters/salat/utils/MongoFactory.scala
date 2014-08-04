@@ -1,4 +1,4 @@
-package spray.oauth.adapters.salat.mongodb
+package spray.oauth.adapters.salat.utils
 
 import com.typesafe.config.ConfigFactory
 import com.mongodb.casbah.{ MongoDB, MongoURI, MongoCollection, MongoConnection }

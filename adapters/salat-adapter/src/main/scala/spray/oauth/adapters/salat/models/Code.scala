@@ -9,7 +9,7 @@ import spray.oauth.models.GrantType
 import spray.oauth.utils.OAuth2Parameters._
 import spray.oauth.utils.OAuth2Utils._
 import spray.oauth.utils.TokenGenerator
-import spray.oauth.adapters.salat.mongodb.BaseDAO
+import spray.oauth.adapters.salat.utils.BaseDAO
 import spray.oauth.{ AuthUser, AuthInfo }
 
 /**

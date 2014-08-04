@@ -4,7 +4,7 @@ import com.novus.salat.global._
 import com.novus.salat.annotations._
 import com.mongodb.casbah.Imports._
 import com.github.nscala_time.time.Imports._
-import spray.oauth.adapters.salat.mongodb.BaseDAO
+import spray.oauth.adapters.salat.utils.BaseDAO
 import scala.collection.JavaConverters
 
 /**

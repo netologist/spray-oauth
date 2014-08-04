@@ -5,7 +5,7 @@ import com.novus.salat.annotations._
 import com.mongodb.casbah.Imports._
 import com.github.nscala_time.time.Imports._
 import spray.oauth.utils.OAuth2Utils
-import spray.oauth.adapters.salat.mongodb.BaseDAO
+import spray.oauth.adapters.salat.utils.BaseDAO
 
 /**
  * Created with IntelliJ IDEA.

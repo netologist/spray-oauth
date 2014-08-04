@@ -12,6 +12,6 @@ trait SprayOAuth2Support {
 
   implicit def grantHandler: OAuth2GrantHandler = DefaultGrantHandler
 
-  implicit def dataHandler: OAuth2DataHandler = MongodbDataHandler
+  implicit def dataHandler: OAuth2DataHandler = SalatDataHandler
 
 }

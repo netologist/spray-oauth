@@ -3,7 +3,7 @@ package spray.oauth.adapters.salat.models
 import com.novus.salat.annotations._
 import com.mongodb.casbah.Imports._
 import com.github.nscala_time.time.Imports._
-import spray.oauth.adapters.salat.mongodb._
+import spray.oauth.adapters.salat.utils._
 import spray.oauth.utils.HashUtils
 import sun.security.provider.MD5
 import java.security.MessageDigest

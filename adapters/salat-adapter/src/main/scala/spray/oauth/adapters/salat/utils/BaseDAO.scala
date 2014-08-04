@@ -1,4 +1,4 @@
-package spray.oauth.adapters.salat.mongodb
+package spray.oauth.adapters.salat.utils
 
 import com.novus.salat.dao.SalatDAO
 import com.mongodb.casbah.Imports._
