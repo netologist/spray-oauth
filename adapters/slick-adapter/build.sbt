@@ -11,7 +11,9 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "io.spray"                %   "spray-routing" 	    % "1.2.0",
   "com.typesafe.akka"       %%  "akka-actor"    	    % "2.2.3",
+  "com.typesafe.slick"      %%  "slick"    	          % "2.0.2",
   "io.spray"                %   "spray-testkit" 	    % "1.2.0"   % "test",
+  "com.typesafe.slick"      %%  "slick-testkit"    	  % "2.0.2"   % "test",
   "com.typesafe.akka"       %%  "akka-testkit"  	    % "2.2.3"   % "test"
 )
 
