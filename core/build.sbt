@@ -17,7 +17,4 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"       %%  "akka-testkit"  	    % "2.2.3"   % "test"
 )
 
-publishMavenStyle := false
-
-
 seq(Revolver.settings: _*)
