@@ -1,5 +1,6 @@
 package spray.oauth.adapters.slick
 
+import spray.oauth.adapters.slick.models.UserDAO
 import spray.oauth.models.GrantType
 import spray.oauth._
 
