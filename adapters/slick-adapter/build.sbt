@@ -13,6 +13,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"       %%  "akka-actor"    	    % "2.2.3",
   "com.typesafe.slick"      %%  "slick"    	          % "2.0.2",
   "com.typesafe.slick"      %%  "slick-extensions"    % "2.0.2",
+  "joda-time"               %   "joda-time"           % "2.4",
+  "org.joda"                %   "joda-convert"        % "1.6",
+  "com.github.tototoshi"    %%  "slick-joda-mapper"   % "1.2.0",
   "io.spray"                %   "spray-testkit" 	    % "1.2.0"   % "test",
   "com.typesafe.slick"      %%  "slick-testkit"    	  % "2.0.2"   % "test",
   "com.typesafe.akka"       %%  "akka-testkit"  	    % "2.2.3"   % "test"

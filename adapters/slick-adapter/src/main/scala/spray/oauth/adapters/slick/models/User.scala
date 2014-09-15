@@ -3,13 +3,13 @@ package spray.oauth.adapters.slick.models
 import org.joda.time.DateTime
 import spray.oauth.adapters.slick.utils.BaseDAO
 
+import com.github.tototoshi.slick.JdbcJodaSupport._
 import scala.slick.driver.JdbcDriver.simple._
-
 
 /**
  * Created by hasanozgan on 14/09/14.
  */
-class User(tag:Tag) extends Table[(Int, String, String, String, DateTime, DateTime, Boolean)](tag, "USERS") {
+class UserTable(tag: Tag) extends Table[(Int, String, String, String, DateTime, DateTime, Boolean)](tag, "USERS") {
   def id = column[Int]("ID", O.PrimaryKey) // This is the primary key column
   def user_id = column[String]("USER_ID")
   def username = column[String]("USERNAME")
@@ -21,14 +21,13 @@ class User(tag:Tag) extends Table[(Int, String, String, String, DateTime, DateTi
   def * = (id, user_id, username, password, created_on, deleted_on, deleted)
 }
 
-object UserDAO extends BaseDAO[User] {
+object UserDAO extends BaseDAO {
+  val users = TableQuery[UserTable]
 
   val querySalesByName = for {
     name <- Parameters[String]
-    c <- tableQuery if c.username is name
+    c <- users if c.username is name
   } yield c.password
 
 }
-
-
 
