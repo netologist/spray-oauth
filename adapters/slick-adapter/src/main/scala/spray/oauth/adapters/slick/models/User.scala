@@ -9,8 +9,10 @@ import scala.slick.driver.JdbcDriver.simple._
 /**
  * Created by hasanozgan on 14/09/14.
  */
-class UserTable(tag: Tag) extends Table[(Int, String, String, String, DateTime, DateTime, Boolean)](tag, "USERS") {
-  def id = column[Int]("ID", O.PrimaryKey) // This is the primary key column
+case class User(id: Long, user_id: String, username: String, password: String, created_on: DateTime, deleted_on: DateTime, deleted: Boolean)
+
+class Users(tag: Tag) extends Table[User](tag, "USERS") {
+  def id = column[Long]("ID", O.PrimaryKey) // This is the primary key column
   def user_id = column[String]("USER_ID")
   def username = column[String]("USERNAME")
   def password = column[String]("PASSWORD")
@@ -18,11 +20,19 @@ class UserTable(tag: Tag) extends Table[(Int, String, String, String, DateTime, 
   def deleted_on = column[DateTime]("DELETED_ON")
   def deleted = column[Boolean]("DELETED")
   // Every table needs a * projection with the same type as the table's type parameter
-  def * = (id, user_id, username, password, created_on, deleted_on, deleted)
+  def * = (id, user_id, username, password, created_on, deleted_on, deleted) <> (User.tupled, User.unapply)
 }
 
 object UserDAO extends BaseDAO {
-  val users = TableQuery[UserTable]
+
+  val users = TableQuery[Users]
+
+  def initial: Unit = {
+    defaultDB withSession { implicit session =>
+      users.ddl.create
+      //users += (10, "123", "meddah", "123456", DateTime.now, DateTime.now, deleted = false)
+    }
+  }
 
   val querySalesByName = for {
     name <- Parameters[String]

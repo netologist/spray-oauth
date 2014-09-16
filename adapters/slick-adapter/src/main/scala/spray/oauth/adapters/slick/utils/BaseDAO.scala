@@ -3,6 +3,7 @@ package spray.oauth.adapters.slick.utils
 import com.typesafe.config.ConfigFactory
 
 import scala.slick.jdbc.JdbcBackend.Database
+import scala.slick.lifted.{ AbstractTable, TableQuery }
 
 /**
  * Created by hasanozgan on 04/08/14.

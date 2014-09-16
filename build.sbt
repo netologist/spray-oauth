@@ -69,7 +69,7 @@ lazy val slickAdapter = project.in(file("adapters/slick-adapter"))
   .dependsOn(core)
   .settings(settings: _*)
   .settings(test in assembly := {})
-  .settings(testOptions in Test += Tests.Argument("showtimes", "true"))
+  .settings(testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oDF"))
 
 lazy val demo = project.in(file("samples/inmemory-webapp"))
   .dependsOn(core)
