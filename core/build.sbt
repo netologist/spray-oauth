@@ -18,6 +18,4 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"       %%  "akka-testkit"  	    % "2.2.3"   % "test"
 )
 
-testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oDF")
-
 seq(Revolver.settings: _*)
