@@ -10,11 +10,11 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "io.spray"                %   "spray-routing" 	    % "1.2.0",
-  "com.novus"               %%  "salat"                 % "1.9.6",
-  "org.mongodb" 		    %%  "casbah" 			    % "2.6.4",
-  "com.github.nscala-time"  %%  "nscala-time"           % "0.8.0",
-  "io.spray"                %   "spray-testkit" 	    % "1.2.0"   % "test"
+  "io.spray"                %%   "spray-routing" 	    % "1.2.0",
+  "com.novus"               %%  "salat"                 % "1.9.9",
+  "org.mongodb" 		    %%  "casbah" 			    % "2.7.3",
+  "com.github.nscala-time"  %%  "nscala-time"           % "1.4.0",
+  "io.spray"                %%   "spray-testkit" 	    % "1.3.1"   % "test"
 )
 
 seq(Revolver.settings: _*)
