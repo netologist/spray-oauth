@@ -6,7 +6,7 @@ Spray OAuth2 Provider Library
 [![Build Status](https://api.travis-ci.org/hasanozgan/spray-oauth.svg?branch=master)](https://travis-ci.org/hasanozgan/spray-oauth)
 
 ##### Road Map 
- - Scala 2.11 migration
+ - <strike>Scala 2.11 migration</strike> Thanks @jmphilli
  - Write tests
  - Spray OAuth Rejectives
  - Write documentation
