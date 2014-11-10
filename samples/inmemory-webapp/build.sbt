@@ -12,13 +12,13 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "io.spray"                    %   "spray-can"     	    % "1.2.0",
-  "io.spray"                    %   "spray-routing" 	    % "1.2.0",
-  "io.spray"                    %   "spray-httpx"           % "1.2.0",
-  "io.spray"                    %%  "spray-json"            % "1.2.5",
-  "com.typesafe.akka"           %%  "akka-actor"    	    % "2.2.3",
-  "io.spray"                    %   "spray-testkit" 	    % "1.2.0"   % "test",
-  "com.typesafe.akka"           %%  "akka-testkit"  	    % "2.2.3"   % "test"
+  "io.spray"                    %%   "spray-can"     	    % "1.3.1",
+  "io.spray"                    %%   "spray-routing" 	    % "1.3.1",
+  "io.spray"                    %%   "spray-httpx"           % "1.3.0",
+  "io.spray"                    %%  "spray-json"            % "1.3.1",
+  "com.typesafe.akka"           %%  "akka-actor"    	    % "2.3.5",
+  "io.spray"                    %%   "spray-testkit" 	    % "1.3.1"   % "test",
+  "com.typesafe.akka"           %%  "akka-testkit"  	    % "2.3.5"   % "test"
 )
 
 seq(Revolver.settings: _*)
